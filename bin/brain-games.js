@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-console.log('Welcome to the Brain Games!');
+import getUsernameAndSayHello from '../src/cli.js';
+
+getUsernameAndSayHello();
