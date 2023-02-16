@@ -1,3 +1,18 @@
+Hello! Welcome to the Brain Games!
+
+Description:
+Each game asks questions that need to be answered. After three correct answers, the game is considered to be completed. Incorrect results end the game and return it again.
+
+Minimum requirements:
+You only need your brain and your computer that can load page less than one day. Then, you'll pass it!
+
+Min specs:
+Node.js v18.12.0.
+Windows 10 or higher with WSL or masOS 10.15+ or any linux distrinutive.
+
+Installing instructions:
+You just need to clone this with 'git clone <ssh/url>'. Then open frontend-project-44' directory. The 'make install' and 'npm link' in your console. Congratulation!)
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Scarecrow2510/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Scarecrow2510/frontend-project-44/actions)
 
