@@ -2,22 +2,22 @@ install: install-deps
 	npm ci
 
 brain-games:
-	node bin/brain-games.js
+	node bin/brainGames.js
 
 brain-even:
-	node bin/brain-even.js
+	node bin/brainEven.js
 
 brain-calc:
-	node bin/brain-calc.js
+	node bin/brainCalc.js
 
 brain-gcd:
-	node bin/brain-gcd.js
+	node bin/brainGcd.js
 
 brain-progression:
-	node bin/brain-progression.js
+	node bin/brainProgression.js
 
 brain-prime:
-	node bin/brain-prime.js
+	node bin/brainPrime.js
 
 lint:
 	npx eslint .

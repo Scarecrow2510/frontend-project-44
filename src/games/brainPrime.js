@@ -1,4 +1,4 @@
-import getRandomNumber from '../helpers/get-random.js';
+import getRandomNumber from '../helpers/getRandom.js';
 import starGame from '../index.js';
 
 const challenge = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -10,10 +10,10 @@ const isPrime = (num) => {
   return num > 1;
 };
 
-const getQuestionAndAnswer = () => {
+const getRound = () => {
   const question = getRandomNumber();
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
-export default () => starGame(getQuestionAndAnswer, challenge);
+export default () => starGame(getRound, challenge);
