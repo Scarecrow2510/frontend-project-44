@@ -1,7 +1,7 @@
-import getRandomNumber from '../helpers/getRandom.js';
+import { getRandomNumber } from '../helpers/getRandom.js';
 import startGame from '../index.js';
 
-const challenge = 'Answer "yes" if the number is even, otherwise answer "no"';
+const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
 const isEven = (number) => number % 2 === 0;
 
@@ -11,4 +11,4 @@ const getRound = () => {
   return [question, correctAnswer];
 };
 
-export default () => startGame(getRound, challenge);
+export default () => startGame(getRound, description);

@@ -1,7 +1,7 @@
-import getRandomNumber from '../helpers/getRandom.js';
+import { getRandomNumber } from '../helpers/getRandom.js';
 import starGame from '../index.js';
 
-const challenge = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
@@ -16,4 +16,4 @@ const getRound = () => {
   return [question, correctAnswer];
 };
 
-export default () => starGame(getRound, challenge);
+export default () => starGame(getRound, description);
