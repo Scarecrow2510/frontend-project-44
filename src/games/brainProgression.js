@@ -1,16 +1,11 @@
-import { getRandomNumber, getRandomFromRangeOf } from '../helpers/getRandom.js';
+import getRandomNumber from '../helpers/getRandom.js';
 import startGame from '../index.js';
-
-const minProgLength = 5;
-const maxProgLength = 10;
-const minProgStep = 2;
-const maxProgStep = 5;
 
 const description = 'What number is missing in the progression?';
 
 const getProgression = (length, step) => {
   const result = [];
-  const startNumber = getRandomNumber();
+  const startNumber = getRandomNumber(0, Math.random() * 100);
   for (let i = startNumber; result.length < length; i += step) {
     result.push(i);
   }
@@ -18,12 +13,12 @@ const getProgression = (length, step) => {
 };
 
 const getRound = () => {
-  const progressionLength = getRandomFromRangeOf(minProgLength, maxProgLength);
-  const progressionStep = getRandomFromRangeOf(minProgStep, maxProgStep);
+  const progressionLength = getRandomNumber(5, 10);
+  const progressionStep = getRandomNumber(2, 5);
   const progression = getProgression(progressionLength, progressionStep);
-  const hiddenValueIndex = getRandomFromRangeOf(0, progression.length - 1);
-  const correctAnswer = progression[hiddenValueIndex].toString();
-  progression[hiddenValueIndex] = '..';
+  const hiddenIndex = getRandomNumber(0, progression.length - 1);
+  const correctAnswer = progression[hiddenIndex].toString();
+  progression[hiddenIndex] = '..';
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
