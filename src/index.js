@@ -7,7 +7,7 @@ const startGame = (getRound, challenge) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(challenge);
-  for (let i = roundsCount; i > 0; i -= 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = getRound();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');

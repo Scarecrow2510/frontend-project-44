@@ -1,4 +1,4 @@
-import getRandomNumber from '../helpers/getRandom.js';
+import getRandomNumber from '../helpers/getRandomNumber.js';
 import startGame from '../index.js';
 
 const operators = ['-', '+', '*'];
@@ -18,8 +18,8 @@ const calculate = (a, b, operator) => {
 };
 
 const getRound = () => {
-  const number1 = getRandomNumber(0, Math.random() * 100);
-  const number2 = getRandomNumber(0, Math.random() * 100);
+  const number1 = getRandomNumber(0, 100);
+  const number2 = getRandomNumber(0, 100);
   const operator = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${number1} ${operator} ${number2}`;
   const answer = calculate(number1, number2, operator).toString();
